@@ -1,0 +1,128 @@
+🟢 Thai Card Reader Agent starting on port 4000...
+🎯 Thai Card Reader Agent listening on ws://127.0.0.1:4000
+
+📝 ใช้งาน:
+   1. เปิด agent นี้ไว้
+   2. เปิดหน้าเว็บ OnsiteRegister2
+   3. เสียบบัตรประชาชนไทย
+   4. ข้อมูลจะถูกส่งเข้าเว็บอัตโนมัติ
+
+ThaiSmartCardConnector init
+New reader detected Alcorlink USB Smart Card Reader 0
+Status( Alcorlink USB Smart Card Reader 0 ): { state: 917522, atr: <Buffer > }
+card removed
+Disconnected
+✅ Client connected. Sending AgentStatusE...
+Status( Alcorlink USB Smart Card Reader 0 ): {
+  state: 983074,
+  atr: <Buffer 3b 79 96 00 ff 54 48 20 4e 49 44 20 31 35>
+}
+card inserted
+Status( Alcorlink USB Smart Card Reader 0 ): {
+  state: 983330,
+  atr: <Buffer 3b 79 96 00 ff 54 48 20 4e 49 44 20 31 35>
+}
+Status( Alcorlink USB Smart Card Reader 0 ): {
+  state: 983074,
+  atr: <Buffer 3b 79 96 00 ff 54 48 20 4e 49 44 20 31 35>
+}
+Status( Alcorlink USB Smart Card Reader 0 ): {
+  state: 983330,
+  atr: <Buffer 3b 79 96 00 ff 54 48 20 4e 49 44 20 31 35>
+}
+Status( Alcorlink USB Smart Card Reader 0 ): {
+  state: 983074,
+  atr: <Buffer 3b 79 96 00 ff 54 48 20 4e 49 44 20 31 35>
+}
+Status( Alcorlink USB Smart Card Reader 0 ): {
+  state: 983330,
+  atr: <Buffer 3b 79 96 00 ff 54 48 20 4e 49 44 20 31 35>
+}
+Status( Alcorlink USB Smart Card Reader 0 ): {
+  state: 983074,
+  atr: <Buffer 3b 79 96 00 ff 54 48 20 4e 49 44 20 31 35>
+}
+Protocol( Alcorlink USB Smart Card Reader 0 ): 1
+Status( Alcorlink USB Smart Card Reader 0 ): {
+  state: 983330,
+  atr: <Buffer 3b 79 96 00 ff 54 48 20 4e 49 44 20 31 35>
+}
+📤 Card read complete: { citizenId: '1100201563590', fullNameTH: 'นาย ฐิติพงศ์ รัตติยา' }
+read complete disconnect
+Status( Alcorlink USB Smart Card Reader 0 ): {
+  state: 984098,
+  atr: <Buffer 3b 79 96 00 ff 54 48 20 4e 49 44 20 31 35>
+}
+Status( Alcorlink USB Smart Card Reader 0 ): { state: 1048594, atr: <Buffer > }
+card removed
+Disconnected
+🔌 Client disconnected
+✅ Client connected. Sending AgentStatusE...
+✅ Client connected. Sending AgentStatusE...
+🔌 Client disconnected
+🔌 Client disconnected
+✅ Client connected. Sending AgentStatusE...
+✅ Client connected. Sending AgentStatusE...
+Status( Alcorlink USB Smart Card Reader 0 ): {
+  state: 1114146,
+  atr: <Buffer 3b 79 96 00 ff 54 48 20 4e 49 44 20 31 35>
+}
+card inserted
+Status( Alcorlink USB Smart Card Reader 0 ): {
+  state: 1114402,
+  atr: <Buffer 3b 79 96 00 ff 54 48 20 4e 49 44 20 31 35>
+}
+Status( Alcorlink USB Smart Card Reader 0 ): {
+  state: 1114146,
+  atr: <Buffer 3b 79 96 00 ff 54 48 20 4e 49 44 20 31 35>
+}
+Status( Alcorlink USB Smart Card Reader 0 ): {
+  state: 1114402,
+  atr: <Buffer 3b 79 96 00 ff 54 48 20 4e 49 44 20 31 35>
+}
+Status( Alcorlink USB Smart Card Reader 0 ): {
+  state: 1114146,
+  atr: <Buffer 3b 79 96 00 ff 54 48 20 4e 49 44 20 31 35>
+}
+Status( Alcorlink USB Smart Card Reader 0 ): {
+  state: 1114402,
+  atr: <Buffer 3b 79 96 00 ff 54 48 20 4e 49 44 20 31 35>
+}
+Status( Alcorlink USB Smart Card Reader 0 ): {
+  state: 1114146,
+  atr: <Buffer 3b 79 96 00 ff 54 48 20 4e 49 44 20 31 35>
+}
+Protocol( Alcorlink USB Smart Card Reader 0 ): 1
+Status( Alcorlink USB Smart Card Reader 0 ): {
+  state: 1114402,
+  atr: <Buffer 3b 79 96 00 ff 54 48 20 4e 49 44 20 31 35>
+}
+📤 Card read complete: { citizenId: '1100201563590', fullNameTH: 'นาย ฐิติพงศ์ รัตติยา' }
+read complete disconnect
+Status( Alcorlink USB Smart Card Reader 0 ): {
+  state: 1115170,
+  atr: <Buffer 3b 79 96 00 ff 54 48 20 4e 49 44 20 31 35>
+}
+🔌 Client disconnected
+🔌 Client disconnected
+✅ Client connected. Sending AgentStatusE...
+Status( Alcorlink USB Smart Card Reader 0 ): { state: 1179666, atr: <Buffer > }
+card removed
+Disconnected
+🔌 Client disconnected
+✅ Client connected. Sending AgentStatusE...
+Status( Alcorlink USB Smart Card Reader 0 ): { state: 11, atr: <Buffer > }
+Reader Alcorlink USB Smart Card Reader 0 removed
+PCSC error 
+🔌 Client disconnected
+✅ Client connected. Sending AgentStatusE...
+🔌 Client disconnected
+✅ Client connected. Sending AgentStatusE...
+🔌 Client disconnected
+✅ Client connected. Sending AgentStatusE...
+🔌 Client disconnected
+✅ Client connected. Sending AgentStatusE...
+🔌 Client disconnected
+✅ Client connected. Sending AgentStatusE...
+🔌 Client disconnected
+✅ Client connected. Sending AgentStatusE...

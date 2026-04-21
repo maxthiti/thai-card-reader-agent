@@ -1,0 +1,25 @@
+{
+  "name": "thai-card-reader-agent",
+  "version": "1.0.0",
+  "description": "WebSocket server for Thai ID Card reading via Zoweetek reader",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "service:install": "node install-service.js",
+    "service:uninstall": "node uninstall-service.js",
+    "service:status": "node service-status.js"
+  },
+  "keywords": [
+    "thai-id",
+    "card-reader",
+    "websocket"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "node-windows": "^1.0.0-beta.8",
+    "thai-id-card-reader": "^1.0.54",
+    "ws": "^8.13.0"
+  }
+}

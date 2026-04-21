@@ -1,0 +1,2 @@
+2026-04-21 14:39:51 - Starting C:\Users\Computer01\.nvm\versions\node\v20.11.0\bin\node.exe  --harmony C:\Users\Computer01\Thitipong\thai-card-reader-agent\node_modules\node-windows\lib\wrapper.js --file C:\Users\Computer01\Thitipong\thai-card-reader-agent\server.js --scriptoptions= --log "Thai Card Reader Agent wrapper" --grow 0.5 --wait 2 --maxrestarts 3 --abortonerror n --stopparentfirst undefined --maxretries 40
+2026-04-21 14:39:51 - Started 11508

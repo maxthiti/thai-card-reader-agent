@@ -1,0 +1,33 @@
+<service>
+	<id>thaicardreaderagent.exe</id>
+	<name>Thai Card Reader Agent</name>
+	<description>Reads Thai ID cards and exposes local websocket at 127.0.0.1:4000</description>
+	<executable>C:\Users\Computer01\.nvm\versions\node\v20.11.0\bin\node.exe</executable>
+	<argument>--harmony</argument>
+	<argument>C:\Users\Computer01\Thitipong\thai-card-reader-agent\node_modules\node-windows\lib\wrapper.js</argument>
+	<argument>--file</argument>
+	<argument>C:\Users\Computer01\Thitipong\thai-card-reader-agent\server.js</argument>
+	<argument>--scriptoptions=</argument>
+	<argument>--log</argument>
+	<argument>Thai Card Reader Agent wrapper</argument>
+	<argument>--grow</argument>
+	<argument>0.5</argument>
+	<argument>--wait</argument>
+	<argument>2</argument>
+	<argument>--maxrestarts</argument>
+	<argument>3</argument>
+	<argument>--abortonerror</argument>
+	<argument>n</argument>
+	<argument>--stopparentfirst</argument>
+	<argument>undefined</argument>
+	<argument>--maxretries</argument>
+	<argument>40</argument>
+	<logmode>rotate</logmode>
+	<stoptimeout>30sec</stoptimeout>
+	<serviceaccount>
+		<domain>DESKTOP-JGAB1DF</domain>
+		<user>LocalSystem</user>
+		<password></password>
+	</serviceaccount>
+	<workingdirectory>C:\Users\Computer01\Thitipong\thai-card-reader-agent</workingdirectory>
+</service>

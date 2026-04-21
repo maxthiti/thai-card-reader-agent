@@ -98,3 +98,12 @@ A: เช็ก:
 
 Get-Service -Name "thaicardreaderagent.exe"
 Get-Content "C:\Users\Computer01\Thitipong\thai-card-reader-agent\daemon\thaicardreaderagent.err.log" -Tail 50
+
+เริ่มแรก
+1.โหลด node.js v20 และ https://www.dnielectronico.es/
+2.โหลด python อย่าลืมติ๊ก add path
+3.โหลด visual studio
+4.เลือก Desktop development with C++
+5.ลงไฟล์นี้
+6.npm install
+7.install-service.js

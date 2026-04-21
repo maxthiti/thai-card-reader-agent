@@ -95,3 +95,6 @@ A: เช็ก:
 & "C:\Users\Computer01\.nvm\versions\node\v20.11.0\bin\node.exe" -v
 & "C:\Users\Computer01\.nvm\versions\node\v20.11.0\bin\node.exe" uninstall-service.js
 & "C:\Users\Computer01\.nvm\versions\node\v20.11.0\bin\node.exe" install-service.js
+
+Get-Service -Name "thaicardreaderagent.exe"
+Get-Content "C:\Users\Computer01\Thitipong\thai-card-reader-agent\daemon\thaicardreaderagent.err.log" -Tail 50

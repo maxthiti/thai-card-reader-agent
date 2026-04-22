@@ -5,7 +5,7 @@ const ThaiIDCardReader =
 
 const PORT = 4000;
 const server = http.createServer();
-const wss = new WebSocket.Server({ server, host: "127.0.0.1" });
+const wss = new WebSocket.Server({ server });
 
 const clients = new Set();
 
@@ -176,8 +176,8 @@ wss.on("connection", (ws) => {
   });
 });
 
-server.listen(PORT, "127.0.0.1", () => {
-  console.log(`🎯 Thai Card Reader Agent listening on ws://127.0.0.1:${PORT}`);
+server.listen(PORT, () => {
+  console.log(`🎯 Thai Card Reader Agent listening on ws://localhost:${PORT}`);
   console.log("");
   console.log("📝 ใช้งาน:");
   console.log("   1. เปิด agent นี้ไว้");

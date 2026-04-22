@@ -106,4 +106,4 @@ Get-Content "C:\Users\Computer01\Thitipong\thai-card-reader-agent\daemon\thaicar
 4.เลือก Desktop development with C++
 5.ลงไฟล์นี้
 6.npm install
-7.install-service.js
+7.node install-service.js

@@ -7,11 +7,13 @@ const PORT = 4000;
 const server = http.createServer();
 const wss = new WebSocket.Server({ server, host: "127.0.0.1" });
 
-const reader = new ThaiIDCardReader();
 const clients = new Set();
 
 let lastCardData = null;
-let readerInitialized = false;
+let reader = null;
+let readerStarting = false;
+let readerRestartTimer = null;
+let activeReaderSession = 0;
 
 const broadcast = (payload) => {
   const serialized = JSON.stringify(payload);
@@ -47,16 +49,36 @@ const normalizeCardData = (data) => {
   };
 };
 
-const initReader = () => {
-  if (readerInitialized) {
+const scheduleReaderRestart = (reason = "unknown") => {
+  if (readerRestartTimer) {
     return;
   }
 
-  readerInitialized = true;
+  console.log(`♻️ Scheduling reader restart in 3s. Reason: ${reason}`);
+  readerRestartTimer = setTimeout(() => {
+    readerRestartTimer = null;
+    initReader();
+  }, 3000);
+};
+
+const initReader = () => {
+  if (readerStarting) {
+    return;
+  }
+
+  readerStarting = true;
+  activeReaderSession += 1;
+  const currentSession = activeReaderSession;
+  reader = new ThaiIDCardReader();
+
   reader.setInsertCardDelay(1000);
   reader.setReadTimeout(5000);
 
   reader.onReadComplete((data) => {
+    if (currentSession !== activeReaderSession) {
+      return;
+    }
+
     const normalized = normalizeCardData(data || {});
     lastCardData = normalized;
 
@@ -69,6 +91,10 @@ const initReader = () => {
   });
 
   reader.onReadError((error) => {
+    if (currentSession !== activeReaderSession) {
+      return;
+    }
+
     const message = typeof error === "string" ? error : String(error);
     console.error("❌ Thai ID card read error:", message);
     broadcast({
@@ -76,9 +102,21 @@ const initReader = () => {
       Status: -1,
       error: message,
     });
+
+    // Re-init reader for USB disconnect/reconnect and transient PC/SC failures.
+    scheduleReaderRestart(message);
   });
 
-  reader.init();
+  try {
+    reader.init();
+    console.log("✅ Reader initialized");
+  } catch (error) {
+    const message = typeof error === "string" ? error : String(error);
+    console.error("❌ Reader init failed:", message);
+    scheduleReaderRestart(message);
+  } finally {
+    readerStarting = false;
+  }
 };
 
 console.log(`🟢 Thai Card Reader Agent starting on port ${PORT}...`);
@@ -164,4 +202,17 @@ process.on("SIGINT", () => {
     console.log("✅ Server closed");
     process.exit(0);
   });
+});
+
+process.on("uncaughtException", (error) => {
+  const message =
+    typeof error === "string" ? error : error?.stack || String(error);
+  console.error("❌ Uncaught exception:", message);
+  scheduleReaderRestart("uncaughtException");
+});
+
+process.on("unhandledRejection", (reason) => {
+  const message = typeof reason === "string" ? reason : String(reason);
+  console.error("❌ Unhandled rejection:", message);
+  scheduleReaderRestart("unhandledRejection");
 });
